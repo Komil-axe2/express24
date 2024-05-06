@@ -1,6 +1,7 @@
 import { Box, Button, CircularProgress, Grid, Stack } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import RecipeCard from "./components/Cards/RecipeCard";
+import App from "./components/Cards/cards";
 import SearchBar from "./components/Form/SearchBar";
 import Layout from "./components/layout/layout";
 const searchApi = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
@@ -41,8 +42,9 @@ const HomePage = () => {
   return (
     <Layout>
       <SearchBar isLoading={isLoading} query={query} setQuery={setQuery} handleSubmit={handleSubmit} />
+      <App />
       <Box>
-        <Box sx={{ flexGrow: 1, maxWidth: "md", margin: "auto", alignItems: "center " }}>
+        <Box sx={{ flexGrow: 1, maxWidth: "lg", margin: "auto", alignItems: "center " }}>
           <h1>Restorantlar</h1>
           <div style={{ display: "flex", gap: "10px" }}>
             <button
